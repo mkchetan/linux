@@ -1,0 +1,19 @@
+# SPDX-License-Identifier: GPL-2.0-only
+#
+# Wireless WAN device configuration
+#
+
+menuconfig WWAN
+	bool "Wireless WAN"
+	depends on NET
+	help
+	  This section contains all Wireless WAN (WWAN) device drivers.
+
+	  If you have one of those WWAN M.2 Modules and wish to use it in Linux
+	  say Y here and also to the Module specific WWAN Device Driver.
+
+	  If unsure, say N.
+
+if WWAN
+source "drivers/net/wwan/iosm/Kconfig"
+endif # WWAN

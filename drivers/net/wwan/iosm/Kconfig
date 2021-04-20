@@ -1,0 +1,17 @@
+# SPDX-License-Identifier: (GPL-2.0-only)
+#
+# IOSM Driver configuration
+#
+# Copyright (C) 2020-21 Intel Corporation
+#
+
+config IOSM
+	tristate "IOSM Driver"
+	depends on INTEL_IOMMU
+	help
+	  This driver enables Intel M.2 WWAN Device communication.
+
+	  If you have one of those Intel M.2 WWAN Modules and wish to use it in
+	  Linux say Y/M here.
+
+	  If unsure, say N.
